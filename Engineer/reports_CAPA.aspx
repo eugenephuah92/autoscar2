@@ -7,7 +7,7 @@
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Manual Escalation
+                    Reports - Corrective Action / Preventive Action
                 </div>
                 <div class="panel-body">
                 	<div class="col-md-6">
@@ -20,16 +20,9 @@
                                           <asp:ListItem Selected="True">Please Select Filter</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
-                                <div class="col-md-3"  style="padding-top:10pt">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="searchTxt" runat="server" placeholder="Search For..." />
-                                        <span class="input-group-btn">
-                                            <asp:LinkButton CssClass="btn btn-default" ID="btnSearch" runat="server">
-                                                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                            </asp:LinkButton>
-                                        </span>
-                                    </div>
-                                </div>
+                                <div class="col-md-1" style="padding-top:10pt">
+                                    <asp:Button ID="btnSearch" CssClass="btn btn-primary" Text="Search" runat="server" />
+                            	</div>
                                 <!-- Advanced Search -->
                                 <div class="panel-group" id="accordion" role="tablist">
                                     <div class="col-md-6 pull-right">

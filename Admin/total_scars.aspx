@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Auto SCAR &amp; TAT - Closed SCARS" Language="C#" MasterPageFile="~/Engineer.Site.Master" AutoEventWireup="true" CodeFile="~/Engineer/closed_scars.aspx.cs" Inherits="Engineer_closed_scars" %>
+﻿<%@ Page Title="Auto SCAR &amp; TAT - Total SCARS" Language="C#" MasterPageFile="~/Admin.Site.Master" AutoEventWireup="true" CodeFile="~/Admin/total_scars.aspx.cs" Inherits="Admin_total_scars" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="right-panel">
@@ -7,7 +7,7 @@
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Closed SCAR
+                    Total SCAR
                 </div>
                 <div class="panel-body">
                 	<div class="col-md-6">
@@ -16,12 +16,13 @@
                             <div class="row">
                                 <div class="col-md-3"  style="padding-top:10pt">
                                     <asp:DropDownList CssClass="form-control" ID="lstFilter" runat="server">  
-                                        <asp:ListItem Selected="True">Please select...</asp:ListItem>
+                                        <asp:ListItem Selected="True">Please Select Filter</asp:ListItem>
                                     </asp:DropDownList>
+
                             	</div>
                                 <div class="col-md-3"  style="padding-top:10pt">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="searchTxt" runat="server" placeholder="Search For..." />
+                                        <asp:TextBox CssClass="form-control" ID="searchTxt" runat="server" placeholder="Search for..." />
                                         <span class="input-group-btn">
                                             <asp:LinkButton CssClass="btn btn-default" ID="btnSearch" runat="server">
                                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -29,6 +30,7 @@
                                         </span>
                                     </div>
                                 </div>
+
                                 <!-- Advanced Search -->
                                 <div class="panel-group" id="accordion" role="tablist">
                                     <div class="col-md-6 pull-right">
@@ -78,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                     <form class="form-horizontal pad10" action="#" method="post">
                             <div class="form-group">
                                 <div class="col-lg-12" style="padding-left:25pt; padding-right:30pt; padding-top:15pt; padding-bottom:15pt">
@@ -96,6 +98,33 @@
                                           	</tr>
                                         </thead>
     									<tbody>
+                                        	<tr>
+                                                <td>P-SOQANP-140916</td>
+                                                <td style="padding-left:30pt">INSUFF SOLDER</td>
+                                                <td style="padding-left:30pt">Insufficient amount of solder on a lead, pad or terminal</td>
+                                                <td style="padding-left:30pt">22/10/2014</td>
+                                                <td style="padding-left:30pt">2</td>
+                                                <td style="padding-left:30pt">1</td>
+                                                <td style="padding-left:30pt">4</td>
+                                          	</tr>
+                                          	<tr>
+                                            	<td>P-SOBDP-142945</td>
+                                                <td style="padding-left:30pt">SKEWED</td>
+                                                <td style="padding-left:30pt">Component with rotational misalignment / misregistration of terminals</td>
+                                                <td style="padding-left:30pt">22/10/2014</td>
+                                                <td style="padding-left:30pt">4</td>
+                                            	<td style="padding-left:30pt">2</td>
+                                                <td style="padding-left:30pt">5</td>
+                                          	</tr>
+                                          	<tr>
+                                            	<td>Q-COBDP-142633</td>
+                                                <td style="padding-left:30pt">FRACTURED SOLDER</td>
+                                                <td style="padding-left:30pt">Stressed solder torn away through the PCB</td>
+                                                <td style="padding-left:30pt">24/10/2014</td>
+                                                <td style="padding-left:30pt">2</td>
+                                            	<td style="padding-left:30pt">1</td>
+                                                <td style="padding-left:30pt">6</td>
+                                          	</tr>      
                                             <tr>
                                             	<td>S-ABCDE-181988</td>
                                                 <td style="padding-left:30pt">BURNED</td>
@@ -104,16 +133,16 @@
                                                 <td style="padding-left:30pt">4</td>
                                             	<td style="padding-left:30pt">2</td>
                                                 <td style="padding-left:30pt">8</td>
-                                          	</tr> 
+                                          	</tr>   
                                             <tr>
-                                            	<td>P-SOBDP-142945</td>
-                                                <td style="padding-left:30pt">SKEWED</td>
-                                                <td style="padding-left:30pt">Component with rotational misalignment / misregistration of terminals</td>
-                                                <td style="padding-left:30pt">22/10/2014</td>
-                                                <td style="padding-left:30pt">4</td>
-                                            	<td style="padding-left:30pt">2</td>
-                                                <td style="padding-left:30pt">5</td>
-                                          	</tr>                                         
+                                            	<td>R-COPAB-123456</td>
+                                                <td style="padding-left:30pt">ARROWS ON PCB</td>
+                                                <td style="padding-left:30pt">Inspection arrows left on the board</td>
+                                                <td style="padding-left:30pt">05/11/2014</td>
+                                                <td style="padding-left:30pt">2</td>
+                                            	<td style="padding-left:30pt">1</td>
+                                                <td style="padding-left:30pt">7</td>
+                                          	</tr>                                              
                                         </tbody>
   									</table>
                                 </div>

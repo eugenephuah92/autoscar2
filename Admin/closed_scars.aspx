@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Auto SCAR &amp; TAT - Closed SCARS" Language="C#" MasterPageFile="~/Engineer.Site.Master" AutoEventWireup="true" CodeFile="~/Engineer/closed_scars.aspx.cs" Inherits="Engineer_closed_scars" %>
+﻿<%@ Page Title="Auto SCAR &amp; TAT - Closed SCARS" Language="C#" MasterPageFile="~/Admin.Site.Master" AutoEventWireup="true" CodeFile="~/Admin/closed_scars.aspx.cs" Inherits="Admin_closed_scars" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="right-panel">
@@ -87,32 +87,29 @@
                                     	<thead>
                                         	<tr>
                                                 <th>CAR Number</th>
+                                                <th style="padding-left:30pt">Assigned QE</th>
                                                 <th style="padding-left:30pt">Defect Name</th>
                                                 <th style="padding-left:30pt">Description</th>
                                                 <th style="padding-left:30pt">Creation Date</th>
-                                                <th style="padding-left:30pt">SCAR Type</th>
-                                                <th style="padding-left:30pt">Level of Escalation</th>
-                                                <th style="padding-left:30pt">Days Till Next Escalation</th>
+                                                <th style="padding-left:30pt">Completion Date</th>
                                           	</tr>
                                         </thead>
     									<tbody>
                                             <tr>
-                                            	<td>S-ABCDE-181988</td>
+                                            	<td><a href="view_scar_record.aspx">S-ABCDE-181988</a></td>
+                                                <td style="padding-left:30pt">Alan</td>
                                                 <td style="padding-left:30pt">BURNED</td>
                                                 <td style="padding-left:30pt">Damaged caused to board or part due to excessive heat</td>
                                                 <td style="padding-left:30pt">25/10/2014</td>
-                                                <td style="padding-left:30pt">4</td>
-                                            	<td style="padding-left:30pt">2</td>
-                                                <td style="padding-left:30pt">8</td>
+                                                <td style="padding-left:30pt">25/10/2014</td>
                                           	</tr> 
                                             <tr>
                                             	<td>P-SOBDP-142945</td>
+                                                <td style="padding-left:30pt">Bob</td>
                                                 <td style="padding-left:30pt">SKEWED</td>
                                                 <td style="padding-left:30pt">Component with rotational misalignment / misregistration of terminals</td>
                                                 <td style="padding-left:30pt">22/10/2014</td>
-                                                <td style="padding-left:30pt">4</td>
-                                            	<td style="padding-left:30pt">2</td>
-                                                <td style="padding-left:30pt">5</td>
+                                                <td style="padding-left:30pt">25/10/2014</td>
                                           	</tr>                                         
                                         </tbody>
   									</table>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Auto SCAR &amp; TAT - Closed SCARS" Language="C#" MasterPageFile="~/Engineer.Site.Master" AutoEventWireup="true" CodeFile="~/Engineer/closed_scars.aspx.cs" Inherits="Engineer_closed_scars" %>
+﻿<%@ Page Title="Auto SCAR &amp; TAT - Pending SCARS" Language="C#" MasterPageFile="~/Manager.Site.Master" AutoEventWireup="true" CodeFile="~/Manager/closed_scars.aspx.cs" Inherits="Manager_closed_scars" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="right-panel">
@@ -7,7 +7,7 @@
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Closed SCAR
+                    Closed SCARs
                 </div>
                 <div class="panel-body">
                 	<div class="col-md-6">

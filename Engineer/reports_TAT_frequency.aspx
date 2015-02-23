@@ -10,28 +10,38 @@
                     Frequency of cases of TAT Triggering
                 </div>
                 <div class="panel-body">
+                	<div class="col-md-5">
+                	<p style="padding-top:10pt"> | <a href="#">Show 10 records</a> | <a href="#">Show 50 records</a> | 
+                    </div>
+                    	
+                            <div class="row">
+                                <div class="col-md-4" style="padding-top:10pt">
+                                    <asp:DropDownList CssClass="form-control" ID="lstFilter" runat="server" >
+                                          <asp:ListItem Selected="True">Please Select Filter</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="col-md-1" style="padding-top:10pt">
+                                    <asp:Button ID="btnSearch" CssClass="btn btn-primary" Text="Search" runat="server" />
+                            	</div>
+                            </div>
+                            
+                    
                             <div class="form-group">
                                 <div class="col-lg-12" style="padding-left:30pt; padding-right:30pt; padding-top:15pt">
                                 	<!-- Table -->
   									<table class="table">
                                     	<thead>
                                         	<tr>
+                                                <th>Frequency</th>
+                                                <th>Escalation Level 1</th>
+                                                <th>Escalation Level 2</th>
                                                 <th>Month</th>
-                                                <th>Frequency of Cases for Level 1 Triggers</th>
-                                                <th>Frequency of Cases for Level 2 Triggers</th>
                                           	</tr>
                                         </thead>
     									<tbody>
                                         	<tr>
-                                                <td>January</td>
-                                                <td>3</td>
-                                                <td>2</td>
-                                        	</tr>   
-                                            <tr>
-                                                <td>February</td>
-                                                <td>5</td>
-                                                <td>1</td>
-                                        	</tr>                  
+                                                <td></td>
+                                        	</tr>                   
                                         </tbody>
   									</table>
                                 </div>

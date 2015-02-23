@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Auto SCAR &amp; TAT - Closed SCARS" Language="C#" MasterPageFile="~/Engineer.Site.Master" AutoEventWireup="true" CodeFile="~/Engineer/closed_scars.aspx.cs" Inherits="Engineer_closed_scars" %>
+﻿<%@ Page Title="Auto SCAR &amp; TAT - SCAR Log" Language="C#" MasterPageFile="~/Manager.Site.Master" AutoEventWireup="true" CodeFile="~/Manager/scar_log.aspx.cs" Inherits="Manager_scar_log" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="right-panel">
@@ -7,7 +7,7 @@
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Closed SCAR
+                    SCAR Log
                 </div>
                 <div class="panel-body">
                 	<div class="col-md-6">
@@ -16,12 +16,13 @@
                             <div class="row">
                                 <div class="col-md-3"  style="padding-top:10pt">
                                     <asp:DropDownList CssClass="form-control" ID="lstFilter" runat="server">  
-                                        <asp:ListItem Selected="True">Please select...</asp:ListItem>
+                                        <asp:ListItem Selected="True">Please Select Filter</asp:ListItem>
                                     </asp:DropDownList>
+
                             	</div>
                                 <div class="col-md-3"  style="padding-top:10pt">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="searchTxt" runat="server" placeholder="Search For..." />
+                                        <asp:TextBox CssClass="form-control" ID="searchTxt" runat="server" placeholder="Search for..." />
                                         <span class="input-group-btn">
                                             <asp:LinkButton CssClass="btn btn-default" ID="btnSearch" runat="server">
                                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -29,6 +30,7 @@
                                         </span>
                                     </div>
                                 </div>
+
                                 <!-- Advanced Search -->
                                 <div class="panel-group" id="accordion" role="tablist">
                                     <div class="col-md-6 pull-right">
@@ -78,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                     <form class="form-horizontal pad10" action="#" method="post">
                             <div class="form-group">
                                 <div class="col-lg-12" style="padding-left:25pt; padding-right:30pt; padding-top:15pt; padding-bottom:15pt">
@@ -87,33 +89,79 @@
                                     	<thead>
                                         	<tr>
                                                 <th>CAR Number</th>
-                                                <th style="padding-left:30pt">Defect Name</th>
-                                                <th style="padding-left:30pt">Description</th>
+                                                <th style="padding-left:30pt">Stage</th>
+                                                <th style="padding-left:30pt">Disapprove Frequency</th>
                                                 <th style="padding-left:30pt">Creation Date</th>
-                                                <th style="padding-left:30pt">SCAR Type</th>
-                                                <th style="padding-left:30pt">Level of Escalation</th>
-                                                <th style="padding-left:30pt">Days Till Next Escalation</th>
+                                                <th style="padding-left:30pt">Completion Date</th>
                                           	</tr>
                                         </thead>
     									<tbody>
-                                            <tr>
-                                            	<td>S-ABCDE-181988</td>
-                                                <td style="padding-left:30pt">BURNED</td>
-                                                <td style="padding-left:30pt">Damaged caused to board or part due to excessive heat</td>
-                                                <td style="padding-left:30pt">25/10/2014</td>
-                                                <td style="padding-left:30pt">4</td>
-                                            	<td style="padding-left:30pt">2</td>
-                                                <td style="padding-left:30pt">8</td>
-                                          	</tr> 
-                                            <tr>
-                                            	<td>P-SOBDP-142945</td>
-                                                <td style="padding-left:30pt">SKEWED</td>
-                                                <td style="padding-left:30pt">Component with rotational misalignment / misregistration of terminals</td>
+                                        	<tr>
+                                                <td>P-SOQANP-140916</td>
+                                                <td style="padding-left:30pt">SCAR Type 4 Pending Approval</td>
+                                                <td style="padding-left:30pt">
+                                                    <a href="#" data-toggle="modal" data-target="#myModalName" aria-labelledby="myModalLabelName" aria-hidden="true" style="text-decoration:none; color:#000;">0</a>
+                                                    
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="myModalName" tabindex="-1" role="dialog" aria-labelledby="myModalLabelName" aria-hidden="true" style="padding-top:100pt">
+                                                      <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                          <div class="modal-header">
+                                                          	<strong>Disapprove Frequency</strong>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <br>
+                                                          </div>
+                                                          <div class="modal-body" style="padding-top:30pt">
+                                                            <div class="form-group">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Manager</th>
+                                                                            <th>Status</th>
+                                                                            <th>Comments</th>
+                                                                            <th>Date</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Alan (QM)</td>
+                                                                            <td>Disapprove</td>
+                                                                            <td>Incomplete data</td>
+                                                                            <td>22/11/2014</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>George (WCM)</td>
+                                                                            <td>Approve</td>
+                                                                            <td>-</td>
+                                                                            <td>22/11/2014</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                          	</div>
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                              <asp:button ID="btnChangeQE" CssClass="btn btn-success" Text="Change QE" runat="server" /> 
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </td>
                                                 <td style="padding-left:30pt">22/10/2014</td>
-                                                <td style="padding-left:30pt">4</td>
-                                            	<td style="padding-left:30pt">2</td>
-                                                <td style="padding-left:30pt">5</td>
-                                          	</tr>                                         
+                                                <td style="padding-left:30pt">Ongoing</td>
+                                          	</tr>
+                                          	<tr>
+                                            	<td>P-SOBDP-142945</td>
+                                                <td style="padding-left:30pt">SCAR Issue Completed</td>
+                                                <td style="padding-left:30pt">2</td>
+                                                <td style="padding-left:30pt">22/10/2014</td>
+                                                <td style="padding-left:30pt">25/10/2014</td>
+                                          	</tr>
+                                          	<tr>
+                                            	<td>Q-COBDP-142633</td>
+                                                <td style="padding-left:30pt">SCAR Type 2 Pending Approval</td>
+                                                <td style="padding-left:30pt">1</td>
+                                                <td style="padding-left:30pt">24/10/2014</td>
+                                                <td style="padding-left:30pt">Ongoing</td>
+                                          	</tr>                                            
                                         </tbody>
   									</table>
                                 </div>

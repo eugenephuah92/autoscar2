@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Auto SCAR &amp; TAT - New SCARS" Language="C#" MasterPageFile="~/Engineer.Site.Master" AutoEventWireup="true" CodeFile="~/Engineer/new_scars.aspx.cs" Inherits="Engineer_new_scars" %>
+﻿<%@ Page Title="Auto SCAR &amp; TAT - Pending SCARS" Language="C#" MasterPageFile="~/Admin.Site.Master" AutoEventWireup="true" CodeFile="~/Admin/pending_scars.aspx.cs" Inherits="Admin_pending_scars" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="right-panel">
@@ -7,7 +7,7 @@
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    New SCAR
+                    Pending SCAR
                 </div>
                 <div class="panel-body">
                 	<div class="col-md-6">
@@ -33,7 +33,7 @@
                     </p>
                     <form class="form-horizontal pad10" action="#" method="post">
                             <div class="form-group">
-                                <div class="col-lg-12" style="padding-left:25pt; padding-right:30pt; padding-top:15pt">
+                                <div class="col-lg-12" style="padding-left:25pt; padding-right:30pt; padding-top:15pt; padding-bottom:15pt">
                                 	<!-- Table -->
   									<table class="table">
                                     	<thead>
@@ -48,24 +48,15 @@
                                           	</tr>
                                         </thead>
     									<tbody>
-                                        	<tr>
-                                                <td><a href="scars_forms.html">P-SOQANP-140916</a></td>
-                                                <td style="padding-left:30pt">INSUFF SOLDER</td>
-                                                <td style="padding-left:30pt">Insufficient amount of solder on a lead, pad or terminal</td>
-                                                <td style="padding-left:30pt">22/10/2014</td>
-                                                <td style="padding-left:30pt">2</td>
-                                                <td style="padding-left:30pt">1</td>
-                                                <td style="padding-left:30pt">4</td>
-                                          	</tr>
-                                          	<tr>
-                                            	<td>Q-COBDP-142633</td>
-                                                <td style="padding-left:30pt">FRACTURED SOLDER</td>
-                                                <td style="padding-left:30pt">Stressed solder torn away through the PCB</td>
-                                                <td style="padding-left:30pt">24/10/2014</td>
+                                            <tr>
+                                            	<td>R-COPAB-123456</td>
+                                                <td style="padding-left:30pt">ARROWS ON PCB</td>
+                                                <td style="padding-left:30pt">Inspection arrows left on the board</td>
+                                                <td style="padding-left:30pt">05/11/2014</td>
                                                 <td style="padding-left:30pt">2</td>
                                             	<td style="padding-left:30pt">1</td>
-                                                <td style="padding-left:30pt">6</td>
-                                          	</tr>
+                                                <td style="padding-left:30pt">7</td>
+                                          	</tr>                                              
                                         </tbody>
   									</table>
                                 </div>
@@ -92,7 +83,7 @@
                     </nav>
                 </div>
             </div>
-        </div><!--/.col-md-12-->
+        </div> <!--/.col-md-12-->
     </div>
 </div>
 
